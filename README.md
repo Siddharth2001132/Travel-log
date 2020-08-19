@@ -1,4 +1,4 @@
-# Travel Log
+# **Travel Log**
 
 A full stack application / list places you have traveled.
 
