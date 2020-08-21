@@ -5,9 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.marker {
+  transform: translate(-50%, -100%);
+}
+.marker.yellow path{
+  fill: #F3B73E;
+}
+.marker.red path{
+  fill: #F05305;
+}
+.marker circle{
+  fill:#FAFAFA;
+}
+
+.popup{
+  width: 40vw;
+  padding: 0.7rem;
+}
+
+.entry-form label,
+.entry-form input,
+.entry-form textarea,
+.entry-form button {
+  margin: 0.5rem 0;
+  display: block;
+  width: 100%;
+}
+
+.LogEntryFormButton{
+
 }
