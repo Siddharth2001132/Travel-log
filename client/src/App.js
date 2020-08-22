@@ -17,11 +17,13 @@ const App = () => {
     zoom: 3,
   });
 
+  const getEntries = async () => {
+    const logEntries = await listLogEntries();
+    setLogEntries(logEntries);
+  }
+
   useEffect(() => {
-    (async () => {
-      const logEntries = await listLogEntries();
-      setLogEntries(logEntries);
-    })(); //iife immediatelly invoke function expression
+    getEntries(); //iife immediatelly invoke function expression
   }, []);
 
   const showMarkerPopup = ( event ) => {
@@ -41,9 +43,8 @@ const App = () => {
       onDblClick={showMarkerPopup}
     >
       {logEntries.map((entry) => (
-        <>
+        <React.Fragment key={entry._id}>
           <Marker
-            key={entry._id}
             latitude={entry.latitude}
             longitude={entry.longitude}
           >
@@ -87,12 +88,13 @@ const App = () => {
                     <strong>Visited date: </strong>
                     {new Date(entry.visitDate).toLocaleDateString()}
                   </small>
+                  {entry.image && <img src={entry.image} alt={entry.title}/>}
 
                 </div>
               </Popup>
             ) : null
           }
-        </>
+        </React.Fragment>
       ))
       }
       {
@@ -127,7 +129,10 @@ const App = () => {
               anchor="top"
             >
               <div className="popup">
-                <LogEntryForm />
+                <LogEntryForm onClose={() => {
+                  setAddEntryLocation(null);
+                  getEntries();
+                }} location={addEntryLocation} />
               </div>
             </Popup>
           </>

@@ -29,19 +29,28 @@ code {
 }
 
 .popup{
-  width: 40vw;
+  width: 30vw;
   padding: 0.7rem;
+}
+
+.popup img {
+  width: 30vw;
+  height: 30vh;
+  text-align: center;
+  margin: 20px auto auto auto;
+  display: block;
 }
 
 .entry-form label,
 .entry-form input,
 .entry-form textarea,
 .entry-form button {
+  font-size: 1.5rem;
   margin: 0.5rem 0;
   display: block;
   width: 100%;
 }
 
-.LogEntryFormButton{
-
+.error{
+  color: #F05305;
 }
