@@ -12,34 +12,35 @@ A full stack application / list places you have traveled.
 
 - [x] Setup Mongoose Model(s) 
 
-- [ ] POST /logs 
+- [x] POST /logs 
   - Create a new log entry
 
-- [ ]  GET /logs
+- [x]  GET /logs
   - List all log enteries
 
-- [ ] Setup Client
+- [x] Setup Client
 
-- [ ] Create Form to add a new entry 
-- [ ] Setup Map SDK client
-- [ ] List all log on map
-
----
+- [x] Create Form to add a new entry 
+- [x] Setup Map SDK client
+- [x] List all log on map
+<!--
 &nbsp;
 - Using Server basic dependencies
   - morgan
   - helmet
   - cors
   - express
-
+-->
+<!--
 - using server dev dependencies
   - eslint 
   - nodemon
-  
+ -->
+<!--
 - using eslint
   - npx eslint --init
-
- ---
+-->
+---
 &nbsp;
  # Log Entry
 
@@ -55,6 +56,7 @@ A full stack application / list places you have traveled.
 
 
 ---
+<!--
 &nbsp;
 # Databse connection checking
 
@@ -62,3 +64,4 @@ A full stack application / list places you have traveled.
 connection.once('open', () => {
   console.log('MongoDB database connection established successfully');
 });``
+-->
