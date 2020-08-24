@@ -4,7 +4,7 @@ A full stack application / list places you have traveled.
 
 ## **TODO**
 
-- [ ] Setup Server 
+- [x] Setup Server 
     - [x] Install Dependencies 
     - [x] Install / Setup Linter 
     - [X] Setup Express App 
